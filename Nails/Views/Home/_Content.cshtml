@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Nails.Models.ContentBlock>
+
+@foreach (var item in Model)
+{
+    <h2 id="@item.HtmlId" class="mt-4">@item.Title</h2>
+    <hr />
+    <div>@item.Content</div>
+}

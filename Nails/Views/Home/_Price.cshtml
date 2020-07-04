@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Nails.Models.Service>
+
+@{
+    var categories = Model.Select(x => x.Category).Distinct().ToList();
+}
+
+<h3 id="price" class="mt-4">Стоимость услуг</h3>
+<hr />
+<div class="container">
+    @foreach (var category in categories)
+    {
+        var items = Model.Where(x => x.Category == category).ToList();
+
+        <h5>@category</h5>
+        <table class="table table-hover small">
+            <tr>
+                <th scope="col" class="w-75">
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th scope="col" class="w-25">
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+            </tr>
+
+            @foreach (var item in items)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @{if (item.Price > 0)
+                            {
+                                @Html.DisplayFor(modelItem => item.Price)
+                            }
+                            else
+                            {
+                                @Html.Raw("БЕСПЛАТНО")
+                            }
+                        }
+                    </td>
+                </tr>
+            }
+
+        </table>
+    }
+</div>

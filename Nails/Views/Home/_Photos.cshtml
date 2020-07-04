@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Nails.Models.Photo>
+
+<h3 id="photos" class="mt-4">Фото работ</h3>
+<hr />
+<div class="col-12 row">
+    @foreach (var photo in Model)
+    {
+        <div class="col-3 mt-1">
+            <a href="@photo.Path" class="ml-1" target="_blank"><img src="@photo.Path" class="img-fluid" style="border-radius: 5px 30px;" /></a>
+        </div>
+    }
+</div>
+c 
