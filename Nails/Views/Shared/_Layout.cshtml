@@ -43,8 +43,10 @@
         @RenderBody()
         <hr />
         <footer>
-            <p class="float-left">&copy; @DateTime.Now.Year - НаМаникюр.рф</p>
-            <p class="float-right">Проект <a href="http://middledeveloper.com" class="text-decoration-none" target="_blank">middledeveloper.com</a></p>
+            <div class="d-flex justify-content-between">
+                <div>&copy; @DateTime.Now.Year - НаМаникюр.рф</div>
+                <div>Проект <a href="http://middledeveloper.com" class="text-decoration-none" target="_blank">middledeveloper.com</a></div>
+            </div>
         </footer>
     </div>
 
