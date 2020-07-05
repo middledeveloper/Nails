@@ -48,16 +48,12 @@ namespace Nails.Migrations
             context.ContactTypes.AddOrUpdate(contactType4);
 
             var contact2 = new Contact() { ContactType = contactType2, Address = "https://www.instagram.com/afanaseva_nail/", User = master, Created = dt, Updated = dt };
-            var contact3 = new Contact() { ContactType = contactType3, Address = "https://wa.me/89633431516", User = master, Created = dt, Updated = dt };
+            var contact3 = new Contact() { ContactType = contactType3, Address = "https://wa.me/79633431516", User = master, Created = dt, Updated = dt };
             var contact4 = new Contact() { ContactType = contactType4, Address = "https://vk.com/yuliya_afanaseva", User = master, Created = dt, Updated = dt };
 
             context.Contacts.AddOrUpdate(contact2);
             context.Contacts.AddOrUpdate(contact3);
             context.Contacts.AddOrUpdate(contact4);
-
-            master.Contacts.Add(contact2);
-            master.Contacts.Add(contact3);
-            master.Contacts.Add(contact4);
 
             context.Masters.AddOrUpdate(master);
 
@@ -85,19 +81,19 @@ namespace Nails.Migrations
             context.RejectionReasons.AddOrUpdate(reject2);
             context.RejectionReasons.AddOrUpdate(reject3);
 
-            context.Photos.Add(new Photo() { Path = "/Content/Photos/Manicure/manicure1.jpg" });
-            context.Photos.Add(new Photo() { Path = "/Content/Photos/Manicure/manicure2.jpg" });
-            context.Photos.Add(new Photo() { Path = "/Content/Photos/Manicure/manicure3.jpg" });
-            context.Photos.Add(new Photo() { Path = "/Content/Photos/Manicure/manicure4.jpg" });
-            context.Photos.Add(new Photo() { Path = "/Content/Photos/Manicure/manicure5.jpg" });
-            context.Photos.Add(new Photo() { Path = "/Content/Photos/Manicure/manicure6.jpg" });
-            context.Photos.Add(new Photo() { Path = "/Content/Photos/Manicure/manicure7.jpg" });
-            context.Photos.Add(new Photo() { Path = "/Content/Photos/Manicure/manicure8.jpg" });
-            context.Photos.Add(new Photo() { Path = "/Content/Photos/Manicure/manicure9.jpg" });
-            context.Photos.Add(new Photo() { Path = "/Content/Photos/Manicure/manicure10.jpg" });
-            context.Photos.Add(new Photo() { Path = "/Content/Photos/Manicure/manicure11.jpg" });
+            context.Photos.AddOrUpdate(new Photo() { Path = "/Content/Photos/Manicure/manicure1.jpg" });
+            context.Photos.AddOrUpdate(new Photo() { Path = "/Content/Photos/Manicure/manicure2.jpg" });
+            context.Photos.AddOrUpdate(new Photo() { Path = "/Content/Photos/Manicure/manicure3.jpg" });
+            context.Photos.AddOrUpdate(new Photo() { Path = "/Content/Photos/Manicure/manicure4.jpg" });
+            context.Photos.AddOrUpdate(new Photo() { Path = "/Content/Photos/Manicure/manicure5.jpg" });
+            context.Photos.AddOrUpdate(new Photo() { Path = "/Content/Photos/Manicure/manicure6.jpg" });
+            context.Photos.AddOrUpdate(new Photo() { Path = "/Content/Photos/Manicure/manicure7.jpg" });
+            context.Photos.AddOrUpdate(new Photo() { Path = "/Content/Photos/Manicure/manicure8.jpg" });
+            context.Photos.AddOrUpdate(new Photo() { Path = "/Content/Photos/Manicure/manicure9.jpg" });
+            context.Photos.AddOrUpdate(new Photo() { Path = "/Content/Photos/Manicure/manicure10.jpg" });
+            context.Photos.AddOrUpdate(new Photo() { Path = "/Content/Photos/Manicure/manicure11.jpg" });
 
-            context.ContentBlocks.Add(new ContentBlock()
+            context.ContentBlocks.AddOrUpdate(new ContentBlock()
             {
                 Title = "Маникюр в Пикалево",
                 HtmlId = "manicure",
@@ -109,7 +105,7 @@ namespace Nails.Migrations
                 Updated = dt
             });
 
-            context.ContentBlocks.Add(new ContentBlock()
+            context.ContentBlocks.AddOrUpdate(new ContentBlock()
             {
                 Title = "Педикюр в Пикалево",
                 HtmlId = "pedicure",

@@ -21,14 +21,12 @@
                 @if (Model.Certificates.Count > 0)
                 {
                     <h5 class="mt-3">Сертификаты</h5>
-                    <div>
-                        @foreach (var certificate in Model.Certificates)
-                        {
-                            <a href="@certificate.Scan" class="text-decoration-none" target="_blank">
-                                <img src="@certificate.Scan" width="300" height="200" class="pt-2 pr-2" alt="@certificate.Authority.Title" />
-                            </a>
-                        }
-                    </div>
+                    foreach (var certificate in Model.Certificates)
+                    {
+                        <a href="@certificate.Scan" class="text-decoration-none" target="_blank">
+                            <img src="@certificate.Scan" width="300" height="200" class="pt-2 pr-2" alt="@certificate.Authority.Title" />
+                        </a>
+                    }
                 }
             </div>
         </div>

@@ -56,7 +56,7 @@ namespace Nails.Controllers
             }
             else
             {
-                var masters = ctx.Masters.AsNoTracking().ToList();
+                var masters = ctx.Masters.ToList();
                 foreach (var master in masters)
                 {
                     ctx.Entry(master).Reference(m => m.Region).Load();
