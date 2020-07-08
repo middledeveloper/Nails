@@ -59,15 +59,13 @@ namespace Nails.Migrations
             context.Masters.AddOrUpdate(master);
 
             var certificationAuthority1 = new CertificationAhority() { Id = 1, Title = "Paris Nail", Url = "https://parisnail.ru/", Created = dt, Updated = dt };
-            var certificationAuthority2 = new CertificationAhority() { Id = 2, Title = "Kart Effective", Url = "https://academyexpert.ru/", Created = dt, Updated = dt };
 
             context.CertificationAhorities.AddOrUpdate(certificationAuthority1);
-            context.CertificationAhorities.AddOrUpdate(certificationAuthority2);
 
             var cert1 = new Certificate() { Id = 1, Authority = certificationAuthority1, Scan = "/Content/Certificates/cert1.jpg", Master = master, Created = dt, Updated = dt };
             var cert2 = new Certificate() { Id = 2, Authority = certificationAuthority1, Scan = "/Content/Certificates/cert2.jpg", Master = master, Created = dt, Updated = dt };
             var cert3 = new Certificate() { Id = 3, Authority = certificationAuthority1, Scan = "/Content/Certificates/cert3.jpg", Master = master, Created = dt, Updated = dt };
-            var cert4 = new Certificate() { Id = 4, Authority = certificationAuthority2, Scan = "/Content/Certificates/cert4.jpg", Master = master, Created = dt, Updated = dt };
+            var cert4 = new Certificate() { Id = 4, Authority = certificationAuthority1, Scan = "/Content/Certificates/cert4.jpg", Master = master, Created = dt, Updated = dt };
 
             context.Certificates.AddOrUpdate(cert1);
             context.Certificates.AddOrUpdate(cert2);

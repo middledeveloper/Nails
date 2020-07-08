@@ -206,6 +206,7 @@
     <Content Include="Content\Certificates\cert2.jpg" />
     <Content Include="Content\Certificates\cert3.jpg" />
     <Content Include="Content\Certificates\cert4.jpg" />
+    <Content Include="Content\Design\phone.png" />
     <Content Include="Content\Logos\Email.png" />
     <Content Include="Content\Logos\Instagram.png" />
     <Content Include="Content\Logos\VK.png" />
